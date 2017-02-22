@@ -1,9 +1,10 @@
+from building import Building
 from classroom import Classroom
 
-class AcademicBuilding():
+class AcademicBuilding(Building):
 
     def __init__(self, address: str, classrooms: list):
-        self.address = address
+        super(AcademicBuilding, self).__init__(address)
         self.classrooms = classrooms
 
     def __str__(self):
