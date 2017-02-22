@@ -40,10 +40,10 @@ class Classroom():
         return equipment
 
     def __str__(self):
-        return 'Classroom {0} has a capacity of {1} and has the following equipment: {2}'.format(
+        return 'Classroom {0} has a capacity of {1} and has the following equipment: {2}.'.format(
                                                                                             self.number,
                                                                                             self.capacity,
-                                                                                            ','.join(self.equipment))
+                                                                                            ', '.join(self.equipment))
 
     def __repr__(self):
         return 'Classroom({0}, {1}, {2})'.format(repr(self.number), self.capacity, self.equipment)
