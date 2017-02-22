@@ -24,4 +24,4 @@ class Triangle():
     def area(self):
         vec1 = self.points[1] - self.points[0]
         vec2 = self.points[2] - self.points[0]
-        return (vec1.x*vec2.y - vec1.y*vec2.x) / 2
+        return abs(vec1.x*vec2.y - vec1.y*vec2.x) / 2
