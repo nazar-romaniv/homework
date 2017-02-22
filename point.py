@@ -1,4 +1,4 @@
-from math import radians, cos
+from math import radians, cos, sin
 
 class Point:
     """
