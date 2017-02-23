@@ -1,8 +1,14 @@
+'''
+The module realises the class Point and defines operations on the objects of the class, which correspond to
+similar operations for vectors.
+'''
+
 from math import radians, cos, sin
 
 class Point:
     """
-    Represents a point in two-dimensional geometric coordinates
+    Represents a point in two-dimensional geometric coordinates and defines operations on points
+    similar to those on vectors.
     """
 
     def __init__(self, x=0, y=0):
@@ -36,6 +42,9 @@ class Point:
         self.move(x_point3, y_point3)
 
     def __add__(self, other):
+        '''
+        Vector addition of two vectors.
+        '''
         return Point(x=self.x + other.x, y=self.y + other.y)
 
     def __iadd__(self, other):
@@ -50,6 +59,9 @@ class Point:
         return self
 
     def __mul__(self, other):
+        '''
+        Operation similar to vector multiplication with a constant.
+        '''
         return Point(self.x * other, self.y * other)
 
     def __imul__(self, other):
@@ -71,7 +83,13 @@ class Point:
         return self
 
     def __abs__(self):
+        '''
+        Returns the absolute value of the respective vector.
+        '''
         return self.x ** 2 + self.y ** 2
 
     def distance(self, other):
+        '''
+        Returns the distance between two points.
+        '''
         return abs(self - other)
