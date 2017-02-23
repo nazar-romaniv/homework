@@ -27,23 +27,23 @@ class Point:
         self.x = x
         self.y = y
 
-    def rotate(self, beta, other_point):
+    def rotate(self, beta, other):
         """
         Rotate point around other point
         """
 
-        dx = self.x - other_point.get_xposition()
-        dy = self.y - other_point.get_yposition()
+        dx = self.x - other.x
+        dy = self.y - other.y
         beta = radians(beta)
-        x_point3 = dx * cos(beta) - dy * sin(beta)
-        y_point3 = dy * cos(beta) + dx * sin(beta)
-        x_point3 = x_point3 + other_point.get_xposition()
-        y_point3 = y_point3 + other_point.get_yposition()
+        x_point3 = dx*cos(beta) - dy*sin(beta)
+        y_point3 = dy*cos(beta) + dx*sin(beta)
+        x_point3 = x_point3 + other.x
+        y_point3 = y_point3 + other.y
         self.move(x_point3, y_point3)
 
     def __add__(self, other):
         '''
-        Vector addition of two vectors.
+        Vector sum of two vectors.
         '''
         return Point(x=self.x + other.x, y=self.y + other.y)
 
